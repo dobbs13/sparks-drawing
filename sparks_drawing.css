@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background: rgb(213, 191, 161);
+    overflow: hidden;
+}
+
+span {
+    position: absolute;
+    background: rgb(206, 124, 124);
+    width: 10px;
+    height: 10px;
+    pointer-events: none;
+    border-radius: 50%;
+}
+
+span::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgb(85, 90, 130);
+    border-radius: 50%;
+    animation: moveSparks 2s linear infinite;
+}
+
+@keyframes moveSparks {
+    0% {
+        transform: translate(0);
+    }
+    100% {
+        transform: translate(300px);
+    }
+}
